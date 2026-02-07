@@ -28,10 +28,14 @@ policy.txt: "Remote work must be approved by the employee's manager."
 
 policy.txt: "Employees may work remotely up to three days per week."
 
-
 ## Tech stack
 - Python  
 - Hugging Face Transformers  
 - Sentence Transformers  
 - FAISS  
 - FLAN-T5  
+
+## Design considerations
+- The system prioritizes safe failure (“I don’t know”) over speculative answers  
+- Retrieval quality is favored over model size to ensure predictable behavior  
+- Responses are intentionally minimal to reduce over-disclosure risk
